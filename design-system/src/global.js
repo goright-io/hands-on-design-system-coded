@@ -1,5 +1,5 @@
 import { createGlobalStyle, css } from "styled-components";
-import { typography } from "./tokens";
+import { typography, spacing } from "./tokens";
 const bodyStyles = css`
   overflow-y: auto;
   overflow-x: hidden;
@@ -92,12 +92,12 @@ const bodyStyles = css`
    * The classes syntax match the pattern ".margin-{direction}-{size}", for example: ".margin-top-sm"
    */
   // WHEN YOU HAVE SPACING TOKENS READY, UNCOMMENT LINES BELOW
-  /* ${Object.keys(spacing).map((token) => {
-    const [size, direction] = token.match(/[0-9]?[A-Z][a-z]+/g);
+  ${Object.keys(spacing).map((token) => {
+    const [size, direction] = token.match(/[0-9]?[A-Z0-9][a-z]+/g);
     return `.margin-${direction.toLowerCase()}-${size.toLowerCase()} {
       margin-${direction.toLowerCase()}: ${spacing[token]}
     }`;
-  })} */
+  })}
 `;
 
 /* Allow design system consumers to access font settings but control how and
