@@ -3,85 +3,42 @@
  * the library and render them inside a container.
  */
 import React from "react";
-import styled from "styled-components";
-import { Button, Icon, Carousel, Select, colors } from "design-system";
+import {
+  Button,
+  Icon,
+  Carousel,
+  Select,
+  Navigation,
+  Separator,
+  Container,
+  Title,
+  MultilineInput,
+} from "design-system";
 import { Link } from "react-router-dom";
+const data = require("../data/data.js");
 
-const imagesPath = `${process.env.PUBLIC_URL}/images`;
-
-const card = `${imagesPath}/card.svg`;
-const cardBlue = `${imagesPath}/cardBlue.svg`;
-const cardPink = `${imagesPath}/cardPink.svg`;
-
-const StyledDiv1 = styled.div`
-  padding: 64px 40px 40px 40px;
-  background-color: ${colors.primary100};
-`;
-
-const StyledDiv2 = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 36px;
-`;
-const StyledDiv3 = styled.div`
-  flex-grow: 2;
-  display: flex;
-  justify-content: start;
-  padding: 0 24px;
-  align-items: center;
-`;
-
-const Styledh2 = styled.h2`
-  margin-bottom: 36px;
-`;
-
-const StyledDiv4 = styled.div`
-  padding: 40px;
-`;
-const StyledDiv5 = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 16px;
-  align-items: baseline;
-`;
-
-const StyledLink = styled.a`
-  color: ${colors.primary900};
-  font-size: 18px;
-`;
-
-const StyledBorder = styled.div`
-  width: 100%;
-  height: 1px;
-  background-color: ${colors.onSurface100};
-  margin-top: 8px;
-  margin-bottom: 32px;
-`;
-
-const StyledDiv6 = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 32px;
-  margin-bottom: 32px;
-`;
+const card = "/images/card.svg";
+const cardBlue = "/images/cardBlue.svg";
+const cardPink = "/images/cardPink.svg";
 
 const Checkout = () => {
   return (
-    <div>
-      <StyledDiv1>
-        <StyledDiv2>
-          <Button as={Link} isIcon to="/cart/item1" color="white">
-            <Icon name="arrowBack" />
-          </Button>
-          <StyledDiv3>
-            <h4>Card</h4>
-          </StyledDiv3>
-          <Button isIcon color="white">
-            <Icon name="settings" />
-          </Button>
-        </StyledDiv2>
-        <Styledh2>Payment Method</Styledh2>
+    <>
+      <Container background="primary100">
+        <Navigation
+          firstAction={
+            <Button as={Link} to="/cart" isIcon color="white">
+              <Icon name="arrowBack" />
+            </Button>
+          }
+          lastAction={
+            <Button isIcon color="white">
+              <Icon name="settings" />
+            </Button>
+          }
+          title="Card"
+        />
+        <Title size="small">Payment Method</Title>
         <Carousel
           images={[
             { source: card },
@@ -89,44 +46,31 @@ const Checkout = () => {
             { source: cardPink },
           ]}
         />
-      </StyledDiv1>
-      <StyledDiv4>
-        <StyledDiv5>
-          <h2>Address</h2>
-          <StyledLink>Change</StyledLink>
-        </StyledDiv5>
-        <p>
-          Norra Larsmovägen 70, KUOPIO
-          <br />
-          70260
-          <br />
-          Finland
-        </p>
-        <StyledBorder />
-        <StyledDiv5>
-          <h2>Delivery</h2>
-        </StyledDiv5>
-        <p>Tarja A Grönholm</p>
-        <StyledDiv6>
-          <Select
-            options={[
-              { title: "DHL Express", value: "dhl" },
-              { title: "Fedex", value: "fedex" },
-              { title: "Pick up at store", value: "pickup" },
-            ]}
-          />
+      </Container>
+      <Container>
+        <MultilineInput label="Address" text={data.user.address} />
+        <Separator className="margin-bottom-3xl margin-top-sm" />
+        <Title size="small">Delivery</Title>
+        <p>Tarja A Grönholm</p>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+          }}
+        >
+          <Select className="margin-top-3xl" options={data.deliveryOptions} />
           <p>€00.00</p>
-        </StyledDiv6>
-        <StyledBorder />
-        <StyledDiv6>
-          <h2>Total</h2>
-          <h2>€95.00</h2>
-        </StyledDiv6>
-        <Button as={Link} to="/" isStretched className="margin-top-3xl">
+        </div>
+        <Separator className="margin-bottom-3xl" />
+        <Title className="margin-bottom-3xl" size="small">
+          <span>Total</span>
+          <span>€95.00</span>
+        </Title>
+        <Button to="/" as={Link} isStretched>
           Place Order
         </Button>
-      </StyledDiv4>
-    </div>
+      </Container>
+    </>
   );
 };
 

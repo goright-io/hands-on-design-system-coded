@@ -2,7 +2,8 @@ const imagesPath = `${process.env.PUBLIC_URL}/images`
 
 module.exports = {
   "user": {
-    "avatar": `${imagesPath}/avatar.png`
+    "avatar": `${imagesPath}/avatar.png`,
+    address: "Norra Larsmovägen 70, KUOPIO\n70260\nFinland"
   },
   "products": {
     "item1": {
@@ -33,5 +34,10 @@ module.exports = {
       "description": "Men’s Shoe, Black",
       "image": `${imagesPath}/item4.png`
     }
-  }
+  },
+  deliveryOptions: [
+    { title: "DHL Express", value: "dhl" },
+    { title: "Fedex", value: "fedex" },
+    { title: "Pick up at store", value: "pickup" },
+  ],
 }
