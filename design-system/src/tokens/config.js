@@ -20,21 +20,6 @@ StyleDictionary.registerTransform({
 module.exports = {
   source: ["./src/tokens/design-tokens.json"],
   platforms: {
-    jswithprefix: {
-      transformGroup: "js",
-      buildPath: "./src/tokens/dist/",
-      transforms: ["size/px", "name/cti/camel"],
-      /* We split tokens into separate files - it will be easier to use them this way */
-      files: [
-        /* Filter and extract spacing tokens*/
-        {
-          destination: "spacing.js",
-          format: "javascript/es6",
-          filter: function (prop) {
-            return prop.path[0] === "spacing";
-          },
-        }]
-      },
     js: {
       transformGroup: "js",
       buildPath: "./src/tokens/dist/",
@@ -57,6 +42,21 @@ module.exports = {
             type: "color",
           },
         },
+        {
+          destination: "sizes.js",
+          format: "javascript/es6",
+          filter: {
+            category: "size",
+          },
+        },
+        /* Filter and extract spacing tokens*/
+        {
+          destination: "spacing.js",
+          format: "javascript/es6",
+          filter: function (prop) {
+            return prop.path[0] === "spacing";
+          },
+        }
       ],
     },
   },

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Icon from "../Icon"
 import Button from "../Button"
-import {  colors, spacing } from "../../tokens";
+import {  colors, sizes } from "../../tokens";
 
 /* ProductNav
  *
@@ -31,7 +31,7 @@ const ProductNav = () => {
 const StyledProductNav = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: ${spacing.spacing2xlBottom};
+  margin-bottom: ${sizes.size2xl};
 `;
 
 const StyledIconWrapper = styled.div`

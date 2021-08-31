@@ -13,59 +13,40 @@ export function VersionInfo() {
     )
   }
 
-export function SpacingSet({spaces}) {
-
-  const groupBy = keys => array =>
-    array.reduce((objectsByKeyValue, obj) => {
-      const value = keys.map(key => obj[key]).join('-');
-      objectsByKeyValue[value] = (objectsByKeyValue[value] || []).concat(obj);
-      return objectsByKeyValue;
-    }, {});
-
-  const getGrouped = (arr, sizes) => {
-
-    return sizes.reduce((acc,curr)=> (acc[curr]=arr.filter(s => s[0].indexOf(`spacing${curr}`) !== -1),acc),{});
-  }
-
-  const getSizes = (arr) => {
-    return arr.reduce((res, obj) => {
-      const size = obj[0].split('spacing')[1].split(/(Top|Right|Bottom|Left)/)[0];
-      if (res.indexOf(size) === -1 ) res.push(size);
-      return res;
-    }, []);
-  }
-
-  const spacesSizes = getSizes(Object.entries(spaces));
-  const spacesGrouped = getGrouped(Object.entries(spaces), spacesSizes);
-
+export function SizesSet({spaces}) {
   return (
-    <div>{spacesSizes.map(size => <SpacingBox key={size} size={size} spaces={spacesGrouped[size]} />)}</div>
+    <div>{Object.entries(spaces).map(([sizeVar, size]) => <SizesBox key={size} size={size} sizeVar={sizeVar} />)}</div>
   )
 }
 
-const SpasingBoxStyled = styled.div`
+const SizesBoxStyled = styled.div`
   margin-bottom: 2em;
+  display: flex;
 `;
 
-const SpacingUnitHolder = styled.div`
-  width: 50px;
+const SizesUnitHolder = styled.div`
+  width: 80px;
   display: inline-block;
 `;
 
-const SpacingUnit = styled.div`
+const SizesUnit = styled.div`
   width: ${({ size }) => size};
   height: ${({ size }) => size};
   display: inline-block;
   background-color: ${colors.primary500};
 `;
 
-export function SpacingBox({spaces}) {
+export function SizesBox({sizeVar, size}) {
   return (
-    <SpasingBoxStyled>
-      <SpacingUnitHolder>
-        <SpacingUnit size={spaces[0][1]}/>
-      </SpacingUnitHolder>
-      <code>Variables: {spaces.map(item => item[0]).join(', ')}</code>
-    </SpasingBoxStyled>
+    <SizesBoxStyled>
+      <SizesUnitHolder>
+        <SizesUnit size={size}/>
+      </SizesUnitHolder>
+      <code>
+        Variable: {sizeVar}
+        <br/>
+        Value: {size}
+      </code>
+    </SizesBoxStyled>
   )
 }
