@@ -70,8 +70,8 @@
       "fileName": "/home/runner/work/hands-on-design-system-coded/hands-on-design-system-coded/design-system/src/intro.stories.mdx",
       "framework": "react"
     },
-    "Spacing": {
-      "fileName": "/home/runner/work/hands-on-design-system-coded/hands-on-design-system-coded/design-system/src/spacing.stories.mdx",
+    "Sizes": {
+      "fileName": "/home/runner/work/hands-on-design-system-coded/hands-on-design-system-coded/design-system/src/sizes.stories.mdx",
       "framework": "react"
     },
     "Typography": {
@@ -370,14 +370,14 @@
         "__id": "intro--page"
       }
     },
-    "spacing--page": {
-      "id": "spacing--page",
+    "sizes--page": {
+      "id": "sizes--page",
       "name": "Page",
-      "kind": "Spacing",
+      "kind": "Sizes",
       "story": "Page",
       "parameters": {
         "docsOnly": true,
-        "__id": "spacing--page"
+        "__id": "sizes--page"
       }
     },
     "typography--page": {
