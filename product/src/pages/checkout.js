@@ -17,9 +17,12 @@ import {
 import { Link } from "react-router-dom";
 const data = require("../data/data.js");
 
-const card = "/images/card.svg";
-const cardBlue = "/images/cardBlue.svg";
-const cardPink = "/images/cardPink.svg";
+const imagesPath = `${process.env.PUBLIC_URL}/images`;
+
+const card = `${imagesPath}/card.svg`;
+const cardBlue = `${imagesPath}/cardBlue.svg`;
+const cardPink = `${imagesPath}/cardPink.svg`;
+
 
 const Checkout = () => {
   return (
