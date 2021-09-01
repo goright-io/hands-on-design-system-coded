@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { colors, spacing } from "../../tokens";
+import { colors, sizes } from "../../tokens";
 
 /* Separator
  *
@@ -14,8 +14,8 @@ export const StyledSeparator = styled.div`
   width: 100%;
   height: 1px;
   background-color: ${colors.onBackground500};
-  margin-bottom: ${spacing.spacing2xlBottom};
-  margin-top: ${spacing.spacing2xlBottom};
+  margin-bottom: ${sizes.size2xl};
+  margin-top: ${sizes.size2xl};
   opacity: 0.1;
 `;
 

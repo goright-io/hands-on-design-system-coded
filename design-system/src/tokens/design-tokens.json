@@ -1,6 +1,71 @@
 {
+  "sizes": {
+    "sizexs": {
+      "category": "size",
+      "exportKey": "size",
+      "value": 2,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "sizesm": {
+      "category": "size",
+      "exportKey": "size",
+      "value": 4,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "sizebase": {
+      "category": "size",
+      "exportKey": "size",
+      "value": 8,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "sizemd": {
+      "category": "size",
+      "exportKey": "size",
+      "value": 12,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "sizelg": {
+      "category": "size",
+      "exportKey": "size",
+      "value": 16,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "sizexl": {
+      "category": "size",
+      "exportKey": "size",
+      "value": 20,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "size2xl": {
+      "category": "size",
+      "exportKey": "size",
+      "value": 24,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "size3xl": {
+      "category": "size",
+      "exportKey": "size",
+      "value": 32,
+      "type": "number",
+      "unit": "pixel"
+    },
+    "size4xl": {
+      "category": "size",
+      "exportKey": "size",
+      "value": 64,
+      "type": "number",
+      "unit": "pixel"
+    }
+  },
   "spacing": {
-    "xs": {
+    "spacexs": {
       "category": "spacing",
       "exportKey": "spacing",
       "top": {
@@ -24,7 +89,7 @@
         "unit": "pixel"
       }
     },
-    "sm": {
+    "spacesm": {
       "category": "spacing",
       "exportKey": "spacing",
       "top": {
@@ -48,7 +113,7 @@
         "unit": "pixel"
       }
     },
-    "base": {
+    "spacebase": {
       "category": "spacing",
       "exportKey": "spacing",
       "top": {
@@ -72,7 +137,7 @@
         "unit": "pixel"
       }
     },
-    "md": {
+    "spacemd": {
       "category": "spacing",
       "exportKey": "spacing",
       "top": {
@@ -96,7 +161,7 @@
         "unit": "pixel"
       }
     },
-    "lg": {
+    "spacelg": {
       "category": "spacing",
       "exportKey": "spacing",
       "top": {
@@ -120,7 +185,7 @@
         "unit": "pixel"
       }
     },
-    "xl": {
+    "spacexl": {
       "category": "spacing",
       "exportKey": "spacing",
       "top": {
@@ -144,7 +209,7 @@
         "unit": "pixel"
       }
     },
-    "2xl": {
+    "space2xl": {
       "category": "spacing",
       "exportKey": "spacing",
       "top": {
@@ -168,7 +233,7 @@
         "unit": "pixel"
       }
     },
-    "3xl": {
+    "space3xl": {
       "category": "spacing",
       "exportKey": "spacing",
       "top": {
@@ -188,13 +253,37 @@
       },
       "left": {
         "value": 32,
+        "type": "number",
+        "unit": "pixel"
+      }
+    },
+    "space4xl": {
+      "category": "spacing",
+      "exportKey": "spacing",
+      "top": {
+        "value": 64,
+        "type": "number",
+        "unit": "pixel"
+      },
+      "right": {
+        "value": 64,
+        "type": "number",
+        "unit": "pixel"
+      },
+      "bottom": {
+        "value": 64,
+        "type": "number",
+        "unit": "pixel"
+      },
+      "left": {
+        "value": 64,
         "type": "number",
         "unit": "pixel"
       }
     }
   },
   "radii": {
-    "4": {
+    "radiussm": {
       "category": "radius",
       "exportKey": "radius",
       "radius": {
@@ -233,7 +322,7 @@
         "type": "number"
       }
     },
-    "8": {
+    "radiusmd": {
       "category": "radius",
       "exportKey": "radius",
       "radius": {
@@ -272,7 +361,7 @@
         "type": "number"
       }
     },
-    "16": {
+    "radiusxl": {
       "category": "radius",
       "exportKey": "radius",
       "radius": {
@@ -311,7 +400,7 @@
         "type": "number"
       }
     },
-    "32": {
+    "radius2xl": {
       "category": "radius",
       "exportKey": "radius",
       "radius": {

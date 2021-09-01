@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { colors } from "../../tokens";
+import { colors, sizes } from "../../tokens";
 import { string, node, arrayOf, oneOf } from "prop-types";
 
 /* Container
@@ -29,7 +29,7 @@ Container.propTypes = {
 const StyledContainer = styled.div`
   ${({ padding, background }) =>
     padding.map((p) => {
-      const paddingValue = p === "to" ? "64px" : "40px";
+      const paddingValue = p === "to" ? sizes.size4xl : sizes.size3xl;
       return `padding-${p}: ${paddingValue};`;
     })}
   display: flex;

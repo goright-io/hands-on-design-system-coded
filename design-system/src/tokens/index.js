@@ -5,6 +5,7 @@
 
 import * as colors from "./dist/colors";
 import * as typography from "./dist/typography";
+import * as sizes from "./dist/sizes";
 import * as spacing from "./dist/spacing";
 
-export { colors, typography, spacing };
+export { colors, typography, sizes, spacing };
