@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/hands-on-design-system--coded/product/static/js/main.b3245dab.chunk.js",
-    "main.js.map": "/hands-on-design-system--coded/product/static/js/main.b3245dab.chunk.js.map",
-    "runtime-main.js": "/hands-on-design-system--coded/product/static/js/runtime-main.193814a4.js",
-    "runtime-main.js.map": "/hands-on-design-system--coded/product/static/js/runtime-main.193814a4.js.map",
-    "static/css/2.db92b86b.chunk.css": "/hands-on-design-system--coded/product/static/css/2.db92b86b.chunk.css",
-    "static/js/2.f00cb175.chunk.js": "/hands-on-design-system--coded/product/static/js/2.f00cb175.chunk.js",
-    "static/js/2.f00cb175.chunk.js.map": "/hands-on-design-system--coded/product/static/js/2.f00cb175.chunk.js.map",
-    "index.html": "/hands-on-design-system--coded/product/index.html",
-    "static/css/2.db92b86b.chunk.css.map": "/hands-on-design-system--coded/product/static/css/2.db92b86b.chunk.css.map",
-    "static/js/2.f00cb175.chunk.js.LICENSE.txt": "/hands-on-design-system--coded/product/static/js/2.f00cb175.chunk.js.LICENSE.txt"
+    "main.js": "/hands-on-design-system-coded/product/static/js/main.c745eebf.chunk.js",
+    "main.js.map": "/hands-on-design-system-coded/product/static/js/main.c745eebf.chunk.js.map",
+    "runtime-main.js": "/hands-on-design-system-coded/product/static/js/runtime-main.167800ff.js",
+    "runtime-main.js.map": "/hands-on-design-system-coded/product/static/js/runtime-main.167800ff.js.map",
+    "static/css/2.db92b86b.chunk.css": "/hands-on-design-system-coded/product/static/css/2.db92b86b.chunk.css",
+    "static/js/2.878bb774.chunk.js": "/hands-on-design-system-coded/product/static/js/2.878bb774.chunk.js",
+    "static/js/2.878bb774.chunk.js.map": "/hands-on-design-system-coded/product/static/js/2.878bb774.chunk.js.map",
+    "index.html": "/hands-on-design-system-coded/product/index.html",
+    "static/css/2.db92b86b.chunk.css.map": "/hands-on-design-system-coded/product/static/css/2.db92b86b.chunk.css.map",
+    "static/js/2.878bb774.chunk.js.LICENSE.txt": "/hands-on-design-system-coded/product/static/js/2.878bb774.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.193814a4.js",
+    "static/js/runtime-main.167800ff.js",
     "static/css/2.db92b86b.chunk.css",
-    "static/js/2.f00cb175.chunk.js",
-    "static/js/main.b3245dab.chunk.js"
+    "static/js/2.878bb774.chunk.js",
+    "static/js/main.c745eebf.chunk.js"
   ]
 }
