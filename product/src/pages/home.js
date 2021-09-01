@@ -40,8 +40,6 @@ const Home = () => {
           );
         })}
       </Grid>
-                  <Card/>
-
     </Container>
   );
 };
